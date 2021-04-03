@@ -9,14 +9,12 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_second);
 
 
         TextView textView = findViewById(R.id.textView);
@@ -25,11 +23,9 @@ public class MainActivity extends AppCompatActivity {
         leftButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Nothing to show", Toast.LENGTH_LONG).show();
-
+               // Toast.makeText(SecondActivity.this, "Left Arrow clicked", Toast.LENGTH_LONG).show();
+               finish();
                 //textView.setText("left");////change this accoringly
-
-
             }
         });
 
@@ -37,10 +33,10 @@ public class MainActivity extends AppCompatActivity {
         rightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(MainActivity.this, "Right Arrow clicked", Toast.LENGTH_LONG).show();
+                Toast.makeText(SecondActivity.this, "No More pages...", Toast.LENGTH_LONG).show();
 
                 //textView.setText("right");//change this accoringly
-                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+
             }
         });
     }
