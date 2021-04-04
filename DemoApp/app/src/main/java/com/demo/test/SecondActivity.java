@@ -16,8 +16,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-
-        TextView textView = findViewById(R.id.textView);
+       /* TextView textView = findViewById(R.id.textView);
 
         Button leftButton = findViewById(R.id.leftArrowButton);
         leftButton.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +37,6 @@ public class SecondActivity extends AppCompatActivity {
                 //textView.setText("right");//change this accoringly
 
             }
-        });
+        });*/
     }
 }

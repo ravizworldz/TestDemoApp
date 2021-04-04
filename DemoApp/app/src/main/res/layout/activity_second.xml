@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".MainActivity"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
     android:orientation="vertical"
-    >
+    android:background="#E4E0E0">
 
-    <LinearLayout android:id="@+id/ll"
+    <!--<LinearLayout android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:padding="15dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/next_prev_background_rounded"
-        android:layout_margin="20dp"
-        >
+        android:layout_margin="20dp">
 
         <Button android:id="@+id/leftArrowButton"
             android:layout_width="24dp"
@@ -24,14 +27,16 @@
             android:background="@drawable/ic_arrow_back_ios_black_24dp"
             android:textSize="30sp"
             android:layout_gravity="center"
+            android:backgroundTint="@color/black"
             android:padding="10dp"
             />
         <TextView android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.6"
             android:layout_height="wrap_content"
             android:text="Second Question"
             android:textSize="20sp"
-            android:layout_weight="0.6"
+            android:textColor="@color/black"
             android:layout_gravity="center"
             android:gravity="center_horizontal"
             />
@@ -42,12 +47,11 @@
             android:textSize="30sp"
             android:padding="10dp"
             android:layout_gravity="center"
+            android:backgroundTint="@color/black"
             android:gravity="center"
             />
 
-
     </LinearLayout>
-
 
     <RadioGroup
         android:id="@+id/env_selector"
@@ -55,7 +59,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="20dp"
-        >
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll">
 
         <RadioButton
             android:id="@+id/optionAButton"
@@ -64,7 +70,9 @@
             android:background="@drawable/answer_options_selector"
             android:button="@null"
             android:text="Option 1000"
-            android:textAlignment="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:layout_marginTop="10dp"
@@ -77,7 +85,9 @@
             android:background="@drawable/answer_options_selector"
             android:button="@null"
             android:text="Option 2000"
-            android:textAlignment="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="textStart"
             android:textAllCaps="false"
             android:layout_marginTop="10dp"
             android:textColor="@color/black"
@@ -91,7 +101,9 @@
             android:button="@null"
             android:text="Option 3000"
             android:layout_marginTop="10dp"
-            android:textAlignment="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -104,12 +116,13 @@
             android:button="@null"
             android:text="Option 4000"
             android:layout_marginTop="10dp"
-            android:textAlignment="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textAlignment="textStart"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textStyle="bold" />
 
-    </RadioGroup>
+    </RadioGroup>-->
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
